@@ -25,7 +25,9 @@
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
 
         <TextView
             android:id="@+id/updated_at"
@@ -37,7 +39,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/address"></TextView>
+            app:layout_constraintTop_toBottomOf="@+id/address">
+
+        </TextView>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cloudrainbow"
+            app:layout_constraintBottom_toTopOf="@+id/status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updated_at" />
 
         <TextView
             android:id="@+id/status"
@@ -89,7 +102,9 @@
             android:text="max temp"
             android:layout_marginEnd="40dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/temp"></TextView>
+            app:layout_constraintTop_toBottomOf="@+id/temp">
+
+        </TextView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -368,7 +383,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Info v1"
-                    android:textSize="14sp"></TextView>
+                    android:textSize="14sp">
+
+                </TextView>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 

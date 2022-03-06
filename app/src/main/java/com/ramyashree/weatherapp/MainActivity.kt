@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import org.json.JSONObject
 import java.lang.Exception
@@ -16,13 +17,12 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val CITY: String="mumbai,in"
+    val CITY:String="mumbai,in"
     val API: String="9a1f65d2129aeaabf785e4bc0ad2a2a7"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         weatherTask().execute()
     }
 
@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg p0: String?): String? {
             var response:String?
             try{
+                val CITY: String? =intent.getStringExtra("location")
                 response= URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API")
                     .readText(Charsets.UTF_8)
             }
@@ -89,6 +90,8 @@ class MainActivity : AppCompatActivity() {
                 findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
                 findViewById<TextView>(R.id.errortext).visibility=View.GONE
                 findViewById<ConstraintLayout>(R.id.mainContainer).visibility=View.VISIBLE
+
+               // Toast.makeText(this@MainActivity, CITY, Toast.LENGTH_SHORT).show()
             }
             catch (e:Exception) {
                 findViewById<ProgressBar>(R.id.loader).visibility = View.VISIBLE

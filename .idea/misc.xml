@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/App-dev/Android Apps - Kotlin/WeatherApp/app/src/main/res/drawable/gradient_background.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Ramyashree Shetty/Desktop/App-dev/Android Apps - Kotlin/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/App-dev/Android Apps - Kotlin/WeatherApp/app/src/main/res/layout/activity_select_city.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Ramyashree Shetty/Desktop/App-dev/Android Apps - Kotlin/WeatherApp/app/src/main/res/layout/dropdown_item.xml" value="0.23541666666666666" />
       </map>
     </option>
   </component>
