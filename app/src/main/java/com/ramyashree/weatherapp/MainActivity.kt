@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             super.onPreExecute()
             findViewById<ProgressBar>(R.id.loader).visibility= View.VISIBLE
             findViewById<ConstraintLayout>(R.id.mainContainer).visibility=View.GONE
-            findViewById<TextView>(R.id.errortext).visibility=View.VISIBLE
+            findViewById<TextView>(R.id.errortext).visibility=View.GONE
         }
 
         override fun doInBackground(vararg p0: String?): String? {
@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             }
             catch (e:Exception){
                 response=null
+                Toast.makeText(this@MainActivity, "app not working", Toast.LENGTH_SHORT).show()
             }
             return  response
         }
