@@ -1,5 +1,4 @@
 # WeatherApp
-Weather Application
 
 Fetches the real time weather-forecast of your city!
 Built on android studio using Kotlin & API.
